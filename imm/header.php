@@ -25,22 +25,13 @@
 
     <!--BANNER/HEADER SECTION-->
     <section class="banner">
+
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <img class="logo" src="<?php bloginfo("template_url"); ?>/assets/images/logos/program-logo.png" alt="Interactive Media Management">
+                <!-- master slider plugin for banner slider-->
+                <?php masterslider(1); ?>
 
-                <div class="carousel-item active">
-                    <img class="banner-img d-block w-100" src="<?php bloginfo("template_url"); ?>/assets/images/header/banner-1.jpg" alt="First slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="banner-img d-block w-100" src="<?php bloginfo("template_url"); ?>/assets/images/header/banner-2.jpg" alt="Second slide">
-                </div>
-                <!--<div class="carousel-item">
-    <img class="banner-img d-block w-100" src="<?php bloginfo("template_url"); ?>/assets/images/header/banner-3.png" alt="Third slide">
-</div>
-<div class="carousel-item">
-    <img class="banner-img d-block w-100" src="<?php bloginfo("template_url"); ?>/assets/images/header/banner-4.png" alt="Fourth slide">
-</div>-->
                 <div class="container">
                     <a href="https://collegeapply.ontariocolleges.ca/Login?collegeCode=ALGO&programCode=0300X01F&lang=en" target="_blank">
                         <button class="apply">Apply Now!</button>
