@@ -1,0 +1,607 @@
+/*Helps with text responsiveness*/
+/*html {
+    font-size: calc(1em + 1vw);
+}*/
+
+/*Disable horizontal scroll*/
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/*
+GENERAL- Apply to Multiple Sections
+*/
+img {
+    height: auto;
+}
+
+li {
+    list-style: none;
+}
+
+button,
+p {
+    font-size: 1.2rem;
+}
+
+button {
+    border: 0;
+}
+
+/* fixing body have padding right when modal open */
+.modal-open {
+    overflow: auto;
+    padding-right: 0 !important;
+}
+
+/* fiv sticky nav bar linked position */
+section {
+    position: relative;
+}
+
+#program-overview {
+    position: absolute;
+    top: -8rem;
+}
+
+#courses,
+#faculty,
+#testimonials {
+    position: absolute;
+    top: -3.5rem;
+}
+
+/*
+TITLES IN SECTIONS:
+*/
+
+/*Left Floating Titles*/
+.section-title-left {
+    /*    margin-left: -25%;*/
+    color: #006341;
+    margin-top: 5%;
+    /*    padding-top: 5%;*/
+    padding-bottom: 10%;
+    padding-left: 4%;
+    border-left: 3px solid #43b02a;
+}
+
+/*Right Floating Titles*/
+.section-title-right {
+    margin-right: auto;
+    color: #006341;
+    margin-top: 5%;
+    padding-bottom: 10%;
+    padding-right: 4%;
+    border-right: 3px solid #43b02a;
+    text-align: right;
+}
+
+
+/*General Paragraph formatting in sections*/
+.section-body p {
+    margin-top: -5%;
+    padding-left: 5%;
+    padding-right: 10%;
+
+}
+
+/*To remove the margin-top property from the second paragraph of a section*/
+.section-body p + p {
+    margin-top: 0;
+}
+
+/*To create the divider between sections*/
+.section {
+    border-bottom: 3px solid #43b02a;
+}
+
+
+/*
+SPECIFIC - Apply to Specific Sections of code
+*/
+
+/*
+HEADER SECTION
+*/
+/*Banner Image settings*/
+.banner-img {
+    background-color: #006341;
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.apply {
+    z-index: 50;
+    position: absolute;
+    background-color: #43b02a;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    bottom: 5%;
+    right: 18%;
+}
+
+.logo {
+    height: 15vh;
+    width: auto;
+    position: absolute;
+    z-index: 30;
+    left: 15%;
+    background-color: white;
+    opacity: 0.8;
+}
+
+
+/*
+NAVIGATION SECTION
+*/
+.navbar {
+    background-color: #006341;
+    width: 100%;
+    z-index: 100;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+/*
+.sticky + .content {
+    padding-top: 20px;
+}
+*/
+
+/*Navbar text */
+.navbar .nav-item .nav-link {
+    color: white;
+}
+
+/*Create separators between Navigation Items*/
+.navbar-nav li {
+    border-right: 1px solid white;
+    padding-right: 20px;
+    padding-left: 10px;
+}
+
+.navbar-nav li:last-child {
+    border-right: none;
+}
+
+/*Padding between Navigation links*/
+.navbar-nav li a {
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+
+.nav-link {
+    font-size: 1.3rem;
+
+}
+
+
+/*
+PROGRAM OVERVIEW SECTION
+*/
+
+/*
+BACKGROUND ICON
+*/
+.section-program-overview {
+    background-image: url(../assets/images/icons/overview.png);
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-size: 18%;
+}
+
+/*
+Buttons for e-brochure and MoreInfo Links in 
+Overview Section
+*/
+.buttons {
+    margin: 0 auto;
+}
+
+.ebrochure-button a {
+    float: left;
+    background-color: #43b02a;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.moreinfo-button button {
+    float: right;
+    background-color: #43b02a;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.ebrochure-button a:hover,
+button:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #006341;
+}
+
+.section-body {
+    font-size: 1.2rem;
+}
+
+/*
+COURSES SECTION
+*/
+
+/*
+BACKGROUND ICON
+*/
+.section-program-courses {
+    background-image: url(../assets/images/icons/courses.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 18%;
+    background-position: 100% 0%;
+}
+
+/*Style for Level text*/
+.level {
+    color: #006341;
+    padding-bottom: 2%;
+}
+
+p.level {
+    font-size: 1rem;
+}
+
+.course-image img {
+    /*     Change to 100% when Asmaa sends pictures*/
+    width: 60%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.course-image img:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 50%;
+    filter: grayscale(100%);
+}
+
+.courses-div {
+    text-align: center;
+    color: #006341;
+}
+
+.curtain {
+    width: 100%;
+    height: auto;
+}
+
+p.course-title {
+    vertical-align: middle;
+    color: #006341;
+}
+
+.modal-body ul li {
+    text-align: left;
+    color: #006341;
+}
+
+/*
+FACULTY SECTION
+*/
+
+/*
+BACKGROUND ICON
+*/
+.section-program-faculty {
+    background-image: url(../assets/images/icons/faculty.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 18%;
+    background-position: 0% 0%;
+}
+
+/*Professor Images at top of Cards*/
+
+.card-img-top img {
+    /*    Center align the image at the top of the card*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    position: relative;
+    border-radius: 0;
+    padding-top: 5%;
+    top: 0;
+
+}
+
+/*Background swoosh position for Professor Name in Card*/
+.card-title-img-top {
+    top: 19%;
+    width: 100%;
+    height: auto;
+
+}
+
+.card {
+    position: relative;
+    width: 75%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.card-title {
+    background-image: url(../assets/images/faculty/name-background.png);
+    background-repeat: no-repeat;
+    transform: translateY(-0.9rem);
+    height: 10vh;
+    /* to move*/
+    font-size: 1rem;
+    text-align: center;
+    font-weight: bolder;
+    color: #006341;
+    background-size: 100% 100%;
+}
+
+.card-title h5 {
+    -webkit-transform: rotate(-7deg);
+    /*    bottom: 0;*/
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: #006341;
+}
+
+.professor-name {
+    writing-mode: vertical-rl;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.professor-name p {
+    margin: 0;
+    text-align: end;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    color: #424651;
+    padding-top: 1em;
+}
+
+.section-body .card-body p {
+    padding-right: 2%;
+    font-size: 1rem;
+}
+
+.section-body .professor-name {
+    padding: 0;
+}
+
+.card-body {
+    margin-top: -50px;
+    color: #006341;
+    padding-top: 10%;
+}
+
+#faculty-cards-mobile {
+    /*    visibility: collapse;*/
+    display: none;
+}
+
+#faculty-cards-tablet {
+    display: inherit;
+}
+
+/*
+TESTIMONIALS SECTION
+*/
+
+/*
+BACKGROUND ICON
+*/
+.section-program-testimonials {
+    background-image: url(../assets/images/icons/testimonials.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 18%;
+    background-position: 100% 0%;
+    border-bottom: none;
+
+}
+
+
+/*Make embedded video responsive*/
+.testimonial-video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.testimonial-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*
+FOOTER SECTION
+*/
+
+.footer {
+    background-image: url(../assets/images/footer-swoosh-full.png);
+    height: auto;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+footer p {
+    font-size: 1rem;
+    padding-right: 0;
+}
+
+.social-media {
+    height: auto;
+    width: 25px;
+    margin-right: 5px;
+    align-items: center;
+}
+
+.school-of-media {
+    height: auto;
+    width: 100%;
+    display: inline-block;
+
+}
+
+footer ul {
+    padding-left: 0;
+
+}
+
+.footer-nav-link {
+    padding-left: 200px;
+    font-size: 1rem;
+    list-style: none;
+}
+
+.footer-nav-link li a:hover,
+.footer-nav-link li a:active {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-nav-link li a:link,
+.footer-nav-link li a:visited {
+    color: white;
+}
+
+.designer {
+    width: 40%;
+    height: auto;
+    padding: 2px;
+    vertical-align: middle;
+}
+
+.designer-div {
+    text-align: center;
+}
+
+.designer-div img:hover {
+    filter: grayscale(100%);
+}
+
+
+@media (max-width: 1000px) {
+
+
+    #faculty-cards-mobile {
+        display: inherit;
+    }
+
+    #faculty-cards-tablet {
+        display: none;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .card-title {
+        height: 11vh;
+    }
+}
+
+/*Media Queries to keep the positions of the professor names consistent*/
+
+@media screen and (min-width: 1200px) {}
+
+
+
+@media screen and (min-width: 992px) {
+    .professor-name p {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 991px) and (min-width: 769px) {
+    .professor-name p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer-nav-link {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .card-title {
+        margin-bottom: 0;
+    }
+
+    #program-overview {
+        position: absolute;
+        top: -10rem;
+    }
+
+    #courses,
+    #faculty,
+    #testimonials {
+        position: absolute;
+        top: -15rem;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 576px) {
+    .professor-name p {
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .logo {
+        background: none;
+        opacity: unset;
+        height: 13vh;
+    }
+
+    .carousel-item::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        opacity: 0.5;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 1rem
+    }
+
+    .nav-link {
+        font-size: 1.1rem;
+    }
+
+
+
+}
