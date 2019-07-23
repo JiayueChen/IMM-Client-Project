@@ -129,13 +129,14 @@ HEADER SECTION
 }
 
 .logo {
-    height: 15vh;
+    height: 16vh;
     width: auto;
     position: absolute;
     z-index: 30;
     left: 15%;
     background-color: white;
     opacity: 0.8;
+    padding: 0.5em;
 }
 
 
@@ -581,7 +582,7 @@ footer ul {
         height: 13vh;
     }
 
-    .carousel-item::before {
+    .ms-slide-bgcont::before {
         content: "";
         position: absolute;
         width: 100%;
