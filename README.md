@@ -1,2 +1,2 @@
 # IMM-Client-Project
-![](/imm/screenshot.png)
+![](/screenshot.png)
