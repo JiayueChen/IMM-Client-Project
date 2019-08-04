@@ -19,7 +19,7 @@ img {
     height: auto;
 }
 
-li {
+footer li {
     list-style: none;
 }
 
@@ -277,6 +277,7 @@ p.level {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 50%;
     filter: grayscale(100%);
+    cursor: pointer;
 }
 
 .courses-div {
@@ -582,6 +583,10 @@ footer ul {
         height: 13vh;
     }
 
+    .apply {
+        right: 10%;
+    }
+
     .ms-slide-bgcont::before {
         content: "";
         position: absolute;
@@ -602,7 +607,10 @@ footer ul {
     .nav-link {
         font-size: 1.1rem;
     }
+}
 
-
-
+@media screen and (max-width: 480px) {
+    .apply {
+        right: 6%;
+    }
 }
