@@ -18,7 +18,7 @@ if ( have_posts() ) :while ( have_posts() ) : the_post(); ?>
         </div>
         <div class="buttons row pt-5 pb-4">
             <div class="col ebrochure-button">
-                <a href="<?php wp_get_upload_dir(); ?>/imm/wp-content/uploads/2019/07/final_draft.pdf">eBrochure</a>
+                <a href="<?php bloginfo("template_url"); ?>/assets/e-brochure.pdf" target="_blank">eBrochure</a>
             </div>
             <div class="col moreinfo-button">
                 <a href="https://www.algonquincollege.com/mediaanddesign/program/imm/" target="_blank">
@@ -58,7 +58,7 @@ if ( have_posts() ) :while ( have_posts() ) : the_post(); ?>
                    while ( $myquery->have_posts() ) {
                       $myquery->the_post();
                       ?>
-                <div class="col-sm-4 courses-div pb-4">
+                <div class="col-12 col-sm-6 col-md-4 courses-div pb-4">
                     <div class="course-image pb-4" data-toggle="modal" data-target="#<?php global $post; echo $post->post_name ?>-Modal">
                         <?php the_post_thumbnail(); ?>
                     </div>
@@ -122,7 +122,7 @@ if ( have_posts() ) :while ( have_posts() ) : the_post(); ?>
             while ( $myquery->have_posts() ) {
                $myquery->the_post();
                ?>
-            <div class="col-sm-4 courses-div pb-4">
+            <div class="col-12 col-sm-6 col-md-4 courses-div pb-4">
                 <div class="course-image pb-4" data-toggle="modal" data-target="#<?php global $post; echo $post->post_name ?>-Modal">
                     <?php the_post_thumbnail(); ?>
                 </div>
@@ -174,7 +174,9 @@ wp_reset_postdata();
             <div class="row pb-4">
                 <?php 
                 $args = array (
-                    'category_name'	=>	'faculty'
+                    'category_name'	=>	'faculty',
+                    'orderby' => 'title',
+                    'order'  => 'ASC',
                 );
 
                 $myquery = new WP_Query( $args );
